@@ -2,3 +2,13 @@ html {
 	font-family: 'Roboto Mono', monospace;
 	font-family: 'Roboto', sans-serif;
 }
+
+h1 {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 3em;
+	font-weight: 700;
+}
+
+p {
+	font-size: 1.5em;
+}
