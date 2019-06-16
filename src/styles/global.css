@@ -5,23 +5,23 @@ html {
 
 h1 {
 	font-family: 'Roboto Mono', monospace;
-	font-size: 3em;
+	font-size: 2em;
 	font-weight: 700;
 }
 
 h3 {
 	font-family: 'Roboto Mono', monospace;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: 700;
 }
 
 p {
-	font-size: 1.5em;
+	font-size: 1.25em;
 }
 
 ul {
 	list-style-type: none;
-	font-size: 1.25em;
+	font-size: 1em;
 }
 
 a:link {

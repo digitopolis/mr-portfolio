@@ -9,11 +9,11 @@ const ListLink = props => (
 
 export default ({ children }) => (
   <div style={{ margin: `3rem auto`, maxWidth: 800, padding: `0 1rem` }}>
-		<header style={{ marginBottom: `1.5rem` }}>
+		<header style={{ marginBottom: `3rem` }}>
 			<Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
 				<h3 style={{ display: `inline` }}>Matt Readout</h3>
 			</Link>
-			<ul style={{ listStyle: `none`, float: `right` }}>
+			<ul style={{ listStyle: `none`, float: `right`, marginBlockStart: `.5em` }}>
 				<ListLink to="/">About</ListLink>
 				<ListLink to="/projects/">Projects</ListLink>
 				<ListLink to="/contact/">Contact</ListLink>
