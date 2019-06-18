@@ -4,15 +4,33 @@ import Layout from '../components/layout'
 import { PROJECTS } from '../data/projectData'
 
 const Project = props => (
-	<div>
+	<div style={{ padding: '1em 0.25em' }}>
 		<h3>{props.name}</h3>
+		<hr/>
 		<p>{props.shortDescription}</p>
 		<ul>
-			{props.bulletPoints.map(point => <li>{point}</li>)}
+			{props.bulletPoints.map((point, idx) => <li key={idx}>{point}</li>)}
 		</ul>
-		<Button>Frontend Repo</Button>
-		<Button>Backend Repo</Button>
-		<Button>Demo</Button>
+		<div style={{ padding: '1em 0.25em' }}>
+			<Button
+				as='a'
+				href={props.frontendRepo}
+			>
+				Frontend Repo
+			</Button>
+			<Button
+				as='a'
+				href={props.backendRepo}
+			>
+				Backend Repo
+			</Button>
+			<Button
+				as='a'
+				href={props.demoVideo}
+			>
+				Demo
+			</Button>
+		</div>
 	</div>
 )
 
@@ -26,6 +44,7 @@ export default () => (
 const Button = styled.button`
 	font-family: 'Roboto Mono', monospace;
 	color: white;
+	text-decoration: none;
 	background: black
 	font-size: 1em;
 	margin: 1em;
