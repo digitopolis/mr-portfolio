@@ -19,16 +19,30 @@ p {
 	font-size: 1.25em;
 }
 
+hr {
+	margin-top: 0;
+	border-style: solid;
+}
+
 ul {
 	list-style-type: none;
 	font-size: 1em;
 }
 
-a:link {
+ul a:link {
 	text-decoration: none;
 	color: black;
 }
 
-a:visited {
+ul a:visited {
+	color: black;
+}
+
+header a:link {
+	text-decoration: none;
+	color: black;
+}
+
+header a:visited {
 	color: black;
 }

@@ -36,7 +36,7 @@ const Project = props => (
 
 export default () => (
   <Layout>
-    <h1>List of projects</h1>
+    <h1>Recent Projects</h1>
 		{PROJECTS.map((project, idx) => <Project key={idx} {...project}/>)}
   </Layout>
 )
