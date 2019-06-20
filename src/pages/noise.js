@@ -12,17 +12,7 @@ class Noise extends React.Component {
 
 	state = {
 		on: false,
-		wave: '',
 		started: false
-	}
-
-	componentDidMount() {
-		console.log('mounted');
-		// osc.connect(gain)
-		//
-		// osc.type = 'sine'
-		// osc.frequency.value = 120
-		// gain.gain.value = 0.05
 	}
 
 	toggleOnOff = () => {
@@ -37,9 +27,8 @@ class Noise extends React.Component {
 	}
 
 	handleWaveSelect = (e) => {
-		console.log(e.target.value)
 		const wave = e.target.value
-		this.setState({ wave })
+		osc.type = wave
 	}
 
 	handleMouseMove = (event) => {
@@ -59,6 +48,8 @@ class Noise extends React.Component {
 		gain.gain.value = 0.05
 
 		osc.start()
+		const started = !this.state.started
+		this.setState({ started })
 	}
 
 	render () {
@@ -66,22 +57,29 @@ class Noise extends React.Component {
 			<Layout>
 				<div>
 					<canvas
-						style={{width: "60%", height: "40%", border:'1px solid #000000' }}
-						onMouseMove={this.handleMouseMove} >
+						style={{width: "75%", height: "45%", border:'1px solid #000000' }}
+						onMouseMove={this.state.started ? this.handleMouseMove : null} >
 					</canvas>
 				</div>
 				<div id="synth-control">
-					<Button onClick={this.startOscillator}>Start</Button>
-					<Button onClick={this.toggleOnOff} >On/Off</Button>
+					<Button
+						disabled={this.state.started}
+						onClick={this.startOscillator}>Start</Button>
+					<Button
+						disabled={!this.state.started}
+						onClick={this.toggleOnOff} >On/Off</Button>
 					<span id="wave-span">
 						<Button
 							value='sine'
+							disabled={!this.state.started}
 							onClick={this.handleWaveSelect}>Sine</Button>
 						<Button
 							value='square'
+							disabled={!this.state.started}
 							onClick={this.handleWaveSelect}>Square</Button>
 						<Button
 							value='saw'
+							disabled={!this.state.started}
 							onClick={this.handleWaveSelect}>Saw</Button>
 					</span>
 				</div>
@@ -97,6 +95,7 @@ export default Noise;
 
 const Button = styled.button`
 	font-family: 'Roboto Mono', monospace;
+	text-decoration: ${props => props.disabled ? 'line-through' : 'none' }
 	color: black;
 	background: white;
 	font-size: 1em;
