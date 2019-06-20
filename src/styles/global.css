@@ -46,3 +46,21 @@ header a:link {
 header a:visited {
 	color: black;
 }
+
+.content {
+	animation-duration: 0.75s;
+	animation-name: slidein;
+}
+
+@keyframes slidein {
+	from {
+		margin-left: 1%;
+    width: 100%;
+    opacity: 0;
+	}
+
+	to {
+		margin-left: 0%;
+    width: 100%;
+	}
+}

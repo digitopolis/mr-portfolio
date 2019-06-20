@@ -55,35 +55,35 @@ class Noise extends React.Component {
 	render () {
 		return (
 			<Layout>
-				<div>
-					<canvas
-						style={{width: "75%", height: "45%", border:'1px solid #000000' }}
-						onMouseMove={this.state.started ? this.handleMouseMove : null} >
-					</canvas>
-				</div>
-				<div id="synth-control">
-					<Button
-						disabled={this.state.started}
-						onClick={this.startOscillator}>Start</Button>
-					<Button
-						disabled={!this.state.started}
-						onClick={this.toggleOnOff} >On/Off</Button>
-					<span id="wave-span">
+				<div className='content'>
+					<div>
+						<canvas
+							style={{width: "75%", height: "45%", border:'1px solid #000000' }}
+							onMouseMove={this.state.started ? this.handleMouseMove : null} >
+						</canvas>
+					</div>
+					<div id="synth-control">
 						<Button
-							value='sine'
-							disabled={!this.state.started}
-							onClick={this.handleWaveSelect}>Sine</Button>
+							disabled={this.state.started}
+							onClick={this.startOscillator}>Start</Button>
 						<Button
-							value='square'
 							disabled={!this.state.started}
-							onClick={this.handleWaveSelect}>Square</Button>
-						<Button
-							value='saw'
-							disabled={!this.state.started}
-							onClick={this.handleWaveSelect}>Saw</Button>
-					</span>
-				</div>
-				<div id="audio-container" hidden>
+							onClick={this.toggleOnOff} >On/Off</Button>
+						<span id="wave-span">
+							<Button
+								value='sine'
+								disabled={!this.state.started}
+								onClick={this.handleWaveSelect}>Sine</Button>
+							<Button
+								value='square'
+								disabled={!this.state.started}
+								onClick={this.handleWaveSelect}>Square</Button>
+							<Button
+								value='saw'
+								disabled={!this.state.started}
+								onClick={this.handleWaveSelect}>Saw</Button>
+						</span>
+					</div>
 				</div>
 			</Layout>
 
