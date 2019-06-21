@@ -56,6 +56,8 @@ class Noise extends React.Component {
 		return (
 			<Layout>
 				<div className='content'>
+					<h1>Make some noise:</h1>
+					<p>This simple synthesizer uses the Web Audio API to generate sounds in your browser. First, click 'Start' to wire everything up, turn the oscillator on and off with 'On/Off,' and change the shape of the sound wave with the remaining three  buttons. Move your cursor around in the box to change the frequency/gain!</p>
 					<div>
 						<canvas
 							style={{width: "75%", height: "45%", border:'1px solid #000000' }}
@@ -79,7 +81,7 @@ class Noise extends React.Component {
 								disabled={!this.state.started}
 								onClick={this.handleWaveSelect}>Square</Button>
 							<Button
-								value='saw'
+								value='sawtooth'
 								disabled={!this.state.started}
 								onClick={this.handleWaveSelect}>Saw</Button>
 						</span>
