@@ -13,10 +13,10 @@ export default ({ children }) => (
 		<Helmet>
 			<title>Matt Readout - Web Developer</title>
       <meta charSet="utf-8" />
-			<meta name="description" content="Matt Readout Web Dev Portfolio">
-		  <meta name="keywords" content="Web Developer, Software Engineer, JavaScript, React, Ruby, Rails">
-		  <meta name="author" content="Matt Readout">
-		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="description" content="Matt Readout Web Dev Portfolio" />
+		  <meta name="keywords" content="Web Developer, Software Engineer, JavaScript, React, Ruby, Rails" />
+		  <meta name="author" content="Matt Readout" />
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Helmet>
 		<header style={{ marginBottom: `3rem` }}>
 			<Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
