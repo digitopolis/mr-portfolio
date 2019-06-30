@@ -4,10 +4,11 @@ import styled	 from 'styled-components'
 
 let canvas
 let ctx
+let ballRadius = 5
 let x
 let y
-let dx
-let dy
+let dx = 2
+let dy = -2
 
 class Breakout extends React.Component {
 
@@ -22,17 +23,22 @@ class Breakout extends React.Component {
 
 	drawBall = () => {
 		ctx.beginPath()
-		ctx.arc(x, y, 10, 0, Math.PI*2)
+		ctx.arc(x, y, ballRadius, 0, Math.PI*2)
 		ctx.fillStyle = 'black'
 		ctx.fill()
 		ctx.closePath()
 	}
 
 	draw = () => {
-		dx = 2;
-		dy = -2;
 		ctx.clearRect(0, 0, canvas.width, canvas.height)
     this.drawBall()
+
+		if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+			dx = -dx
+		}
+		if (y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+			dy = -dy
+		}
     x += dx
     y += dy
 	}
