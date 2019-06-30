@@ -11,6 +11,10 @@ let dy
 
 class Breakout extends React.Component {
 
+	state = {
+		start: false
+	}
+
 	componentDidMount() {
 		canvas = document.getElementById('gameCanvas')
 		ctx = canvas.getContext('2d')
@@ -25,13 +29,25 @@ class Breakout extends React.Component {
 	}
 
 	draw = () => {
+		dx = 2;
+		dy = -2;
 		ctx.clearRect(0, 0, canvas.width, canvas.height)
     this.drawBall()
     x += dx
     y += dy
 	}
 
+	start = () => {
+		x = canvas.width/2;
+		y = canvas.height-30;
+		let start = !this.state.start
+		this.setState({ start })
+	}
+
 	render () {
+		if (this.state.start) {
+			setInterval(this.draw, 10)
+		}
 		return (
 			<Layout>
 				<div className='content'>
@@ -43,7 +59,7 @@ class Breakout extends React.Component {
 							style={{width: "75%", height: "45%", border:'1px solid #000000' }}></canvas>
 					</div>
 					<div>
-						<Button onClick={this.draw}>Start</Button>
+						<Button onClick={this.start}>Start</Button>
 					</div>
 				</div>
 			</Layout>
