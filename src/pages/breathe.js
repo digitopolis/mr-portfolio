@@ -4,7 +4,9 @@ import Layout from '../components/layout'
 class Breathe extends React.Component {
 	render () {
 		return (
-			<h1>Breathing exercise</h1>
+			<Layout>
+				<h1>Breathing exercise</h1>
+			</Layout>
 		)
 	}
 }
