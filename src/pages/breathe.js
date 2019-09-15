@@ -6,6 +6,7 @@ class Breathe extends React.Component {
 		return (
 			<Layout>
 				<h1>Breathing exercise</h1>
+				<div className='circle'></div>
 			</Layout>
 		)
 	}

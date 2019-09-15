@@ -73,6 +73,18 @@ span.wave {
   display: inline-block;
 }
 
+div.circle {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-style: solid;
+	border-width:	5px;
+	border-radius: 50%;
+	border-color: black;
+}
+
 @keyframes wave-animation {
     0% { transform: rotate(  0.0deg) }
    10% { transform: rotate(-10.0deg) }
