@@ -88,15 +88,15 @@ div.circle {
 	border-radius: 50%;
 	border-color: black;
 	animation-name: breath-animation;
-	animation-duration: 5s;
+	animation-duration: 8s;
 	animation-iteration-count: infinite;
 }
 
 @keyframes breath-animation {
 	0% { height: 100px; width: 100px; }
-	70% { height: 400px; width: 400px; }
-	90% { height: 425px; width: 425px; }
-	100% { height: 100px; width: 100px; }
+	30% { height: 400px; width: 400px; opacity: 1 }
+	40% { height: 405px; width: 405px; opacity: 0.3; }
+	100% { height: 100px; width: 100px; opacity: 1; }
 }
 
 @keyframes wave-animation {
