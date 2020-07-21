@@ -1,75 +1,81 @@
 html {
-	font-family: 'Roboto Mono', monospace;
-	font-family: 'Roboto', sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 2em;
-	font-weight: 700;
+  font-family: "Roboto Mono", monospace;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.75em;
+  font-weight: 700;
 }
 
 h3 {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 1.5em;
-	font-weight: 700;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 
 p {
-	font-size: 1.25em;
+  font-size: 1.25em;
 }
 
 hr {
-	margin-top: 0;
-	border-style: solid;
+  margin-top: 0;
+  border-style: solid;
 }
 
 ul {
-	list-style-type: none;
-	font-size: 1em;
+  list-style-type: none;
+  font-size: 1em;
 }
 
 ul a:link {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 }
 
 ul a:visited {
-	color: black;
+  color: black;
 }
 
 header a:link {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 }
 
 header a:visited {
-	color: black;
+  color: black;
 }
 
 .content {
-	animation-duration: 0.75s;
-	animation-name: slidein;
+  animation-duration: 0.75s;
+  animation-name: slidein;
 }
 
 div.flex-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
 }
 
 @keyframes slidein {
-	from {
-		margin-left: 1%;
+  from {
+    margin-left: 1%;
     width: 100%;
     opacity: 0;
-	}
+  }
 
-	to {
-		margin-left: 0%;
+  to {
+    margin-left: 0%;
     width: 100%;
-	}
+  }
 }
 
 span.wave {
@@ -81,30 +87,59 @@ span.wave {
 }
 
 div.circle {
-	height: 100px;
-	width: 100px;
-	border-style: solid;
-	border-width:	5px;
-	border-radius: 50%;
-	border-color: black;
-	animation-name: breath-animation;
-	animation-duration: 8s;
-	animation-iteration-count: infinite;
+  height: 100px;
+  width: 100px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 50%;
+  border-color: black;
+  animation-name: breath-animation;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes breath-animation {
-	0% { height: 100px; width: 100px; }
-	30% { height: 400px; width: 400px; opacity: 1 }
-	40% { height: 405px; width: 405px; opacity: 0.3; }
-	100% { height: 100px; width: 100px; opacity: 1; }
+  0% {
+    height: 100px;
+    width: 100px;
+  }
+  30% {
+    height: 400px;
+    width: 400px;
+    opacity: 1;
+  }
+  40% {
+    height: 405px;
+    width: 405px;
+    opacity: 0.3;
+  }
+  100% {
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+  }
 }
 
 @keyframes wave-animation {
-    0% { transform: rotate(  0.0deg) }
-   10% { transform: rotate(-10.0deg) }
-   20% { transform: rotate( 12.0deg) }
-   30% { transform: rotate(-10.0deg) }
-   40% { transform: rotate(  9.0deg) }
-   50% { transform: rotate(  0.0deg) }
-  100% { transform: rotate(  0.0deg) }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
