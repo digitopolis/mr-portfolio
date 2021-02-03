@@ -1,5 +1,19 @@
 export const PROJECTS = [
   {
+    name: "My Media Shelf",
+    shortDescription:
+      "A way for users to keep track of the things they're reading, watching, playing, etc. – and to make lists of similar content.",
+    bulletPoints: [
+      "+ Built UI in React with TypeScript for type security and reduced errors in development process",
+      "+ Connected PostgreSQL database to RESTful Rails API",
+      "+ Implemented secure password reset feature using DB tokens and Rails Action Mailer",
+      "+ Utilized Chart.js to create data visualization based on user's activity",
+    ],
+    frontendRepo: "https://github.com/digitopolis/list-manager-app",
+    backendRepo: "https://github.com/digitopolis/list-manager-api",
+    demoVideo: "https://mm-list-manager-app.herokuapp.com/",
+  },
+  {
     name: "Portfolio",
     shortDescription:
       "A modern platform for visual artists to showcase their work and build an online community",
